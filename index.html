@@ -3,15 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>WASM Blog</title>
+<link data-trunk data-bin="wasmblog" rel="rust"/>
+<link data-trunk rel="copy-dir" href="data/json"/>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)'], ['$', '$'], ['$$', '$$']],
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <h1>WASM Blog</h1>
-    <script type="module">
-        import init, { greet } from './pkg/wasmblog.js';
-
-        init().then(() => {
-            greet('WebAssembly');
-        });
-    </script>
+<script>
+    <!-- var mathInterval = window.setInterval(function () { -->
+    <!--     if (window.MathJax) { -->
+    <!--         window.MathJax.typeset(); -->
+    <!--         console.log('refreshing math'); -->
+    <!--     } -->
+    <!-- }, 1000); -->
+</script>
 </body>
 </html>
